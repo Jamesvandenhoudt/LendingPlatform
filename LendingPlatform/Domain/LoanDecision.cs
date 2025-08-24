@@ -16,7 +16,7 @@ public enum LoanDecision
     Declined,
 
     /// <summary>
-    /// The Submitted status indicates that the loan application has been submitted but not yet processed.
+    /// The Pending status indicates that the loan application has been submitted but not yet processed.
     /// </summary>
-    Submitted
+    Pending
 }

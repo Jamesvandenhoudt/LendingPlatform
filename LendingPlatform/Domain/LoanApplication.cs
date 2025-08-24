@@ -23,7 +23,7 @@ public class LoanApplication
     /// <summary>
     /// The decision made on the loan application.
     /// </summary>
-    public LoanDecision LoanDecision { get; set; }
+    public LoanDecision LoanDecision { get; private set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="LoanApplication"/> class with the specified loan amount, asset value, and credit score.
@@ -48,7 +48,7 @@ public class LoanApplication
         LoanAmount = loanAmount;
         AssetValue = assetValue;
         CreditScore = creditScore ?? throw new ArgumentNullException(nameof(creditScore), "Credit score cannot be null.");
-        LoanDecision = LoanDecision.Submitted; // Default to Submitted
+        LoanDecision = LoanDecision.Pending;
     }
 
     /// <summary>
@@ -103,4 +103,3 @@ public class LoanApplication
         return LoanAmount / AssetValue;
     }
 }
-
