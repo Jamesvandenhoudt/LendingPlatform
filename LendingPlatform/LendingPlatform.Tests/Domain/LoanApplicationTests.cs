@@ -1,6 +1,6 @@
 using LendingPlatform.Domain;
 
-namespace LendingPlatform.Tests;
+namespace LendingPlatform.Tests.Domain;
 
 public class LoanApplicationTests
 {
@@ -62,14 +62,14 @@ public class LoanApplicationTests
 
         // Assert
         Assert.Equal(LoanDecision.Declined, loanApplication.LoanDecision);
-    }    
-    
+    }
+
     [Fact]
     public void LoanOverOneMillion_ValidLTVAndCreditScore_IsApproved()
     {
         // Arrange
         var assetValue = 1_000_000m;
-        var loanAmount = 200_000m; 
+        var loanAmount = 200_000m;
         var creditScore = new CreditScore(950);
 
         var loanApplication = new LoanApplication(loanAmount, assetValue, creditScore);

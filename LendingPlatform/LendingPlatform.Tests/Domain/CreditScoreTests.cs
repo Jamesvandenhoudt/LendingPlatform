@@ -1,6 +1,6 @@
 ﻿using LendingPlatform.Domain;
 
-namespace LendingPlatform.Tests;
+namespace LendingPlatform.Tests.Domain;
 
 public class CreditScoreTests
 {
