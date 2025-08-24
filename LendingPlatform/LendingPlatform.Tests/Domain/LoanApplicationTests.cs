@@ -35,7 +35,7 @@ public class LoanApplicationTests
     {
         // Arrange
         var assetValue = 800_000m;
-        var loanAmount = 1_000_000m;
+        var loanAmount = 1_100_000m;
         var creditScore = new CreditScore(900);
 
         var loanApplication = new LoanApplication(loanAmount, assetValue, creditScore);
@@ -51,8 +51,8 @@ public class LoanApplicationTests
     public void LoanOverOneMillion_CreditScoreTooLow_IsDeclined()
     {
         // Arrange
-        var assetValue = 1_000_000m;
-        var loanAmount = 200_000m;
+        var assetValue = 1_500_000m;
+        var loanAmount = 1_000_000m;
         var creditScore = new CreditScore(600);
 
         var loanApplication = new LoanApplication(loanAmount, assetValue, creditScore);
@@ -204,8 +204,8 @@ public class LoanApplicationTests
     public void LTV_90Percent_AutomaticallyDeclined()
     {
         // Arrange
-        var assetValue = 1_000_000m;
-        var loanAmount = 900_000m;
+        var assetValue = 900_000m;
+        var loanAmount = 800_000m;
         var creditScore = new CreditScore(850);
 
         var loanApplication = new LoanApplication(loanAmount, assetValue, creditScore);
