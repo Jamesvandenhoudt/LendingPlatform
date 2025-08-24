@@ -67,13 +67,10 @@ public class LoanApplication
             return;
         }
 
-        if (LoanAmount >= 1000000)
+        if (LoanAmount >= 1000000 && !(LoanToValueRatio <= 0.6m && CreditScore.Value >= 950))
         {
-            if (LoanToValueRatio < 0.6m && CreditScore.Value >= 950)
-            {
-                LoanDecision = LoanDecision.Declined;
-                return;
-            }
+            LoanDecision = LoanDecision.Declined;
+            return;
         }
 
         if (!MeetsCreditScore())

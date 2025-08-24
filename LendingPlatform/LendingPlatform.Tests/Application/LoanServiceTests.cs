@@ -32,8 +32,8 @@ public class LoanServiceTests
     public void GetApplicantsCountByDecision_ShouldReturnCorrectCount()
     {
         // Arrange
-        _sut.ProcessApplication(150_000m, 200_000m, 750);
-        _sut.ProcessApplication(1_500_000m, 2_000_000m, 800);
+        _sut.ProcessApplication(150_000m, 200_000m, 850);
+        _sut.ProcessApplication(1_000_000m, 1_100_000m, 800);
 
         // Act
         var approvedCount = _sut.GetApplicantsCountByDecision(LoanDecision.Approved);

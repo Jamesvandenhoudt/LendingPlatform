@@ -68,8 +68,8 @@ public class LoanApplicationTests
     public void LoanOverOneMillion_ValidLTVAndCreditScore_IsApproved()
     {
         // Arrange
-        var assetValue = 1_000_000m;
-        var loanAmount = 200_000m;
+        var assetValue = 1_700_000m;
+        var loanAmount = 1_000_000m;
         var creditScore = new CreditScore(950);
 
         var loanApplication = new LoanApplication(loanAmount, assetValue, creditScore);
